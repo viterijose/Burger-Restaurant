@@ -32,7 +32,7 @@ var orm = {
             cb(result);
         })
     },
-    update: function (table, objColVals, condition, cd) {
+    update: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
         queryString += " SET ";
         queryString += objToSql(objColVals);
@@ -43,7 +43,6 @@ var orm = {
             if (err) {
                 throw err;
             }
-
             cb(result);
         })
     }

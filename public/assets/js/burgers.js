@@ -4,7 +4,7 @@ $(function () {
         var eatState = $(this).data("eaten");
         
         var eatenState = {
-            eaten: eatState
+            devoured: eatState
         }
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
