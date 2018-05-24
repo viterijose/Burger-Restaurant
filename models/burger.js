@@ -10,6 +10,11 @@ var burger = {
         orm.update("burgers", objColVals, condition, function (res) {
             cb(res);
         })
+    },
+    create: function(columns,vals,cb){
+        orm.create("burgers",columns,vals,function(res){
+            cb(res);
+        });
     }
 }
 module.exports = burger; 
