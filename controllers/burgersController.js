@@ -11,3 +11,4 @@ router.get("/",function(req,res){
         res.render("index",burgerObject);
     });
 });
+module.exports = router;
