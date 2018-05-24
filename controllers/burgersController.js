@@ -25,4 +25,13 @@ router.put("/api/burgers/:id", function (req, res) {
         }
     });
 });
+
+router.post("/api/burgers", function (req, res) {
+    burger.create([
+        "name", "devoured"
+    ], [req.body.name, req.body.devoured],
+        function (result) {
+            res.json({ id: result.insertId });
+        })
+})
 module.exports = router;
