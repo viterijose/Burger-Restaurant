@@ -56,18 +56,18 @@ var orm = {
             cb(result);
         })
     },
-    create: function (table, columns, condition, cb) {
+    create: function (table, columns, values, cb) {
         var queryString = "INSERT INTO " + table;
         queryString += " (";
-        queryString += cols.toString();
+        queryString += columns.toString();
         queryString += ") ";
         queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
+        queryString += printQuestionMarks(values.length);
         queryString += ") ";
 
         console.log(queryString);
 
-        connection.query(queryString, vals, function (err, result) {
+        connection.query(queryString, values, function (err, result) {
             if (err) {
                 throw err;
             }
