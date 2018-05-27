@@ -1,0 +1,10 @@
+.container-form{
+    background-color: rgb(249,161,71);
+    padding: 10px;
+    margin: auto;
+    border: solid 2px;
+}
+
+h1{
+    text-align: center;
+}

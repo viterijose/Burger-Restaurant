@@ -2,8 +2,10 @@
 	{{name}}
 
 	<button class="change-eat" data-id="{{id}}" data-eaten="{{devoured}}">
-		{{#if devoured}}DEVOUR{{else}}ON PLATE{{/if}}
+		{{#if devoured}}DEVOUR{{else}}
+		<i class="material-icons">
+			fastfood
+		</i>{{/if}}
 	</button>
 
-	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
 </li>
